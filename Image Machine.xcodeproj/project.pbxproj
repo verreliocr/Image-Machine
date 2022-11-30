@@ -18,6 +18,7 @@
 		2697724329380EBE00691366 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724229380EBE00691366 /* Extension+UITableViewCell.swift */; };
 		2697724529380EC800691366 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724429380EC800691366 /* Extension+UITableView.swift */; };
 		2697724829380F2B00691366 /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724729380F2B00691366 /* IRouter.swift */; };
+		2697724A29380F5500691366 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724929380F5500691366 /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2697724229380EBE00691366 /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
 		2697724429380EC800691366 /* Extension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
 		2697724729380F2B00691366 /* IRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
+		2697724929380F5500691366 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2697724729380F2B00691366 /* IRouter.swift */,
+				2697724929380F5500691366 /* AppRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				2697722329380B2A00691366 /* AppDelegate.swift in Sources */,
 				2697723F29380CB200691366 /* Extension+UIViewController.swift in Sources */,
 				2697723D29380CA200691366 /* Extension+UINavigationController.swift in Sources */,
+				2697724A29380F5500691366 /* AppRouter.swift in Sources */,
 				2697724529380EC800691366 /* Extension+UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
