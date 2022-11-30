@@ -21,6 +21,7 @@
 		2697724A29380F5500691366 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724929380F5500691366 /* AppRouter.swift */; };
 		2697724F293810A300691366 /* MachineDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724E293810A300691366 /* MachineDataContract.swift */; };
 		269772522938114000691366 /* MachineObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772512938114000691366 /* MachineObject.swift */; };
+		269772542938122B00691366 /* MachineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772532938122B00691366 /* MachineDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2697724929380F5500691366 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		2697724E293810A300691366 /* MachineDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDataContract.swift; sourceTree = "<group>"; };
 		269772512938114000691366 /* MachineObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineObject.swift; sourceTree = "<group>"; };
+		269772532938122B00691366 /* MachineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2697724E293810A300691366 /* MachineDataContract.swift */,
+				269772532938122B00691366 /* MachineDataModel.swift */,
 			);
 			path = "Machine Data";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2697723929380C7600691366 /* Extension+Codable.swift in Sources */,
+				269772542938122B00691366 /* MachineDataModel.swift in Sources */,
 				2697723B29380C9000691366 /* Extension+UIApplication.swift in Sources */,
 				2697724129380E5700691366 /* Extension+UIView.swift in Sources */,
 				2697724829380F2B00691366 /* IRouter.swift in Sources */,
