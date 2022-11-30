@@ -19,6 +19,8 @@
 		2697724529380EC800691366 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724429380EC800691366 /* Extension+UITableView.swift */; };
 		2697724829380F2B00691366 /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724729380F2B00691366 /* IRouter.swift */; };
 		2697724A29380F5500691366 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724929380F5500691366 /* AppRouter.swift */; };
+		2697724F293810A300691366 /* MachineDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724E293810A300691366 /* MachineDataContract.swift */; };
+		269772522938114000691366 /* MachineObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772512938114000691366 /* MachineObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2697724429380EC800691366 /* Extension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
 		2697724729380F2B00691366 /* IRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
 		2697724929380F5500691366 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		2697724E293810A300691366 /* MachineDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDataContract.swift; sourceTree = "<group>"; };
+		269772512938114000691366 /* MachineObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +72,16 @@
 		2697722129380B2A00691366 /* Image Machine */ = {
 			isa = PBXGroup;
 			children = (
-				2697723629380C1E00691366 /* Core */,
+				2697723629380C1E00691366 /* Cores */,
+				26977250293810F500691366 /* Objects */,
+				2697724C2938103600691366 /* Modules */,
 				2697722D29380B2C00691366 /* LaunchScreen.storyboard */,
 				2697723029380B2C00691366 /* Info.plist */,
 			);
 			path = "Image Machine";
 			sourceTree = "<group>";
 		};
-		2697723629380C1E00691366 /* Core */ = {
+		2697723629380C1E00691366 /* Cores */ = {
 			isa = PBXGroup;
 			children = (
 				2697723729380C6700691366 /* Extension */,
@@ -83,7 +89,7 @@
 				2697722229380B2A00691366 /* AppDelegate.swift */,
 				2697722B29380B2C00691366 /* Assets.xcassets */,
 			);
-			path = Core;
+			path = Cores;
 			sourceTree = "<group>";
 		};
 		2697723729380C6700691366 /* Extension */ = {
@@ -107,6 +113,30 @@
 				2697724929380F5500691366 /* AppRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		2697724C2938103600691366 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2697724D2938105100691366 /* Machine Data */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2697724D2938105100691366 /* Machine Data */ = {
+			isa = PBXGroup;
+			children = (
+				2697724E293810A300691366 /* MachineDataContract.swift */,
+			);
+			path = "Machine Data";
+			sourceTree = "<group>";
+		};
+		26977250293810F500691366 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				269772512938114000691366 /* MachineObject.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +217,9 @@
 				2697722329380B2A00691366 /* AppDelegate.swift in Sources */,
 				2697723F29380CB200691366 /* Extension+UIViewController.swift in Sources */,
 				2697723D29380CA200691366 /* Extension+UINavigationController.swift in Sources */,
+				2697724F293810A300691366 /* MachineDataContract.swift in Sources */,
 				2697724A29380F5500691366 /* AppRouter.swift in Sources */,
+				269772522938114000691366 /* MachineObject.swift in Sources */,
 				2697724529380EC800691366 /* Extension+UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
