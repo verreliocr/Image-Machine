@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+protocol IMachineDataView: AnyObject {
+    func showMessage(_ message: String, title: String, completion: (() -> Void)?)
+}
+
+protocol ILoginViewModel {
+    func setView(_ view: IMachineDataView)
+    func getNumberOfMaching() -> Int
+    func getMachineName(at row: Int) -> String
+    func getMachineType(at row: Int) -> String
+    func getSortedBy() -> String
+    func getSortedType() -> String
+}
