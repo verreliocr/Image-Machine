@@ -9,15 +9,21 @@ import UIKit
 
 class MachineItemTableCell: UITableViewCell {
 
+    @IBOutlet weak var machineNameLabel: UILabel!
+    @IBOutlet weak var machineTypeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupView()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func setupView() {
+        selectionStyle = .none
+    }
+    
+    func bind(name: String, type: String) {
+        machineNameLabel.text = name
+        machineTypeLabel.text = type
     }
     
 }
