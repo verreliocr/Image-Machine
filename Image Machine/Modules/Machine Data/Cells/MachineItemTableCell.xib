@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,53 +12,36 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="MachineItemTableCell" customModule="Image_Machine" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="492" height="121"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="492" height="121"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGZ-Ea-C1S">
-                        <rect key="frame" x="8" y="0.0" width="476" height="64"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NNX-QR-7qh">
+                        <rect key="frame" x="8" y="0.0" width="476" height="113"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIL-63-Ybz">
-                                <rect key="frame" x="8" y="8" width="460" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="45G-dM-bx1"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIL-63-Ybz">
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="113"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-xu-lWA">
-                                <rect key="frame" x="8" y="40" width="460" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-xu-lWA">
+                                <rect key="frame" x="320" y="0.0" width="156" height="113"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yIL-63-Ybz" firstAttribute="leading" secondItem="RGZ-Ea-C1S" secondAttribute="leading" constant="8" id="1w5-Rp-4xW"/>
-                            <constraint firstItem="yIL-63-Ybz" firstAttribute="top" secondItem="RGZ-Ea-C1S" secondAttribute="top" constant="8" id="2k1-RO-OWa"/>
-                            <constraint firstAttribute="height" constant="64" id="4dV-n5-GcU"/>
-                            <constraint firstItem="a3O-xu-lWA" firstAttribute="top" secondItem="yIL-63-Ybz" secondAttribute="bottom" constant="8" id="IJF-F1-4Du"/>
-                            <constraint firstAttribute="trailing" secondItem="a3O-xu-lWA" secondAttribute="trailing" constant="8" id="TE3-yA-C9t"/>
-                            <constraint firstAttribute="bottom" secondItem="a3O-xu-lWA" secondAttribute="bottom" constant="8" id="d4G-Fd-z0E"/>
-                            <constraint firstItem="a3O-xu-lWA" firstAttribute="leading" secondItem="RGZ-Ea-C1S" secondAttribute="leading" constant="8" id="tkg-zW-og1"/>
-                            <constraint firstAttribute="trailing" secondItem="yIL-63-Ybz" secondAttribute="trailing" constant="8" id="w1U-vl-0bQ"/>
+                            <constraint firstItem="a3O-xu-lWA" firstAttribute="width" secondItem="yIL-63-Ybz" secondAttribute="width" multiplier="0.5" id="Xws-F7-XNT"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="8"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
+                    </stackView>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGray4Color"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="RGZ-Ea-C1S" secondAttribute="trailing" constant="8" id="AWl-GF-Gje"/>
-                    <constraint firstAttribute="bottom" secondItem="RGZ-Ea-C1S" secondAttribute="bottom" constant="8" id="Rxq-9C-ztq"/>
-                    <constraint firstItem="RGZ-Ea-C1S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="oE3-7k-BMc"/>
-                    <constraint firstItem="RGZ-Ea-C1S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wNX-zt-X2M"/>
+                    <constraint firstItem="NNX-QR-7qh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Dgu-vc-K7E"/>
+                    <constraint firstAttribute="bottom" secondItem="NNX-QR-7qh" secondAttribute="bottom" constant="8" id="Lxs-OP-4M5"/>
+                    <constraint firstItem="NNX-QR-7qh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kp2-Pu-9vn"/>
+                    <constraint firstAttribute="trailing" secondItem="NNX-QR-7qh" secondAttribute="trailing" constant="8" id="lP4-BS-Qp4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -70,12 +52,4 @@
             <point key="canvasLocation" x="-190.76923076923077" y="-3.9099526066350707"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
