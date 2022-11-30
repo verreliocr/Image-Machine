@@ -22,6 +22,8 @@
 		2697724F293810A300691366 /* MachineDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724E293810A300691366 /* MachineDataContract.swift */; };
 		269772522938114000691366 /* MachineObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772512938114000691366 /* MachineObject.swift */; };
 		269772542938122B00691366 /* MachineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772532938122B00691366 /* MachineDataModel.swift */; };
+		2697725C2938144200691366 /* MachineItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697725A2938144200691366 /* MachineItemTableCell.swift */; };
+		2697725D2938144200691366 /* MachineItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2697725B2938144200691366 /* MachineItemTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		2697724E293810A300691366 /* MachineDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDataContract.swift; sourceTree = "<group>"; };
 		269772512938114000691366 /* MachineObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineObject.swift; sourceTree = "<group>"; };
 		269772532938122B00691366 /* MachineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDataModel.swift; sourceTree = "<group>"; };
+		2697725A2938144200691366 /* MachineItemTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineItemTableCell.swift; sourceTree = "<group>"; };
+		2697725B2938144200691366 /* MachineItemTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineItemTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 		2697724D2938105100691366 /* Machine Data */ = {
 			isa = PBXGroup;
 			children = (
+				269772592938127A00691366 /* Cells */,
 				2697724E293810A300691366 /* MachineDataContract.swift */,
 				269772532938122B00691366 /* MachineDataModel.swift */,
 			);
@@ -140,6 +145,15 @@
 				269772512938114000691366 /* MachineObject.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		269772592938127A00691366 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2697725A2938144200691366 /* MachineItemTableCell.swift */,
+				2697725B2938144200691366 /* MachineItemTableCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2697725D2938144200691366 /* MachineItemTableCell.xib in Resources */,
 				2697722F29380B2C00691366 /* LaunchScreen.storyboard in Resources */,
 				2697722C29380B2C00691366 /* Assets.xcassets in Resources */,
 			);
@@ -216,6 +231,7 @@
 				269772542938122B00691366 /* MachineDataModel.swift in Sources */,
 				2697723B29380C9000691366 /* Extension+UIApplication.swift in Sources */,
 				2697724129380E5700691366 /* Extension+UIView.swift in Sources */,
+				2697725C2938144200691366 /* MachineItemTableCell.swift in Sources */,
 				2697724829380F2B00691366 /* IRouter.swift in Sources */,
 				2697724329380EBE00691366 /* Extension+UITableViewCell.swift in Sources */,
 				2697722329380B2A00691366 /* AppDelegate.swift in Sources */,
