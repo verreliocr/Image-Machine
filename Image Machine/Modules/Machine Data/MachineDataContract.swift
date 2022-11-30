@@ -9,9 +9,10 @@ import Foundation
 
 protocol IMachineDataView: AnyObject {
     func showMessage(_ message: String, title: String, completion: (() -> Void)?)
+    func reloadData()
 }
 
-protocol ILoginViewModel {
+protocol IMachineDataViewModel {
     func setView(_ view: IMachineDataView)
     func getNumberOfMaching() -> Int
     func getMachineName(at row: Int) -> String

@@ -8,6 +8,17 @@
 import UIKit
 
 class MachineDataView: UIViewController {
+    
+    let viewModel: IMachineDataViewModel
+    
+    init(viewModel: IMachineDataViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: "MachineDataView", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     @IBOutlet weak var sortNameButton: UIButton!
     @IBOutlet weak var sortTypeButton: UIButton!
@@ -17,4 +28,10 @@ class MachineDataView: UIViewController {
         super.viewDidLoad()
     }
 
+}
+
+extension MachineDataView: IMachineDataView {
+    func reloadData() {
+        
+    }
 }
