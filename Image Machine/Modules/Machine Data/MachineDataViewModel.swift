@@ -29,7 +29,7 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
         return view
     }
     
-    func getNumberOfMaching() -> Int {
+    func getNumberOfMachine() -> Int {
         return model.data.count
     }
     

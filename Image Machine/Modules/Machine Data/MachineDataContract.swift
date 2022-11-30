@@ -14,7 +14,7 @@ protocol IMachineDataView: AnyObject {
 
 protocol IMachineDataViewModel {
     func setView(_ view: IMachineDataView)
-    func getNumberOfMaching() -> Int
+    func getNumberOfMachine() -> Int
     func getMachineName(at row: Int) -> String
     func getMachineType(at row: Int) -> String
     func getSortedBy() -> String
