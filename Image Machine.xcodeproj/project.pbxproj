@@ -10,6 +10,14 @@
 		2697722329380B2A00691366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697722229380B2A00691366 /* AppDelegate.swift */; };
 		2697722C29380B2C00691366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2697722B29380B2C00691366 /* Assets.xcassets */; };
 		2697722F29380B2C00691366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2697722D29380B2C00691366 /* LaunchScreen.storyboard */; };
+		2697723929380C7600691366 /* Extension+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697723829380C7600691366 /* Extension+Codable.swift */; };
+		2697723B29380C9000691366 /* Extension+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697723A29380C9000691366 /* Extension+UIApplication.swift */; };
+		2697723D29380CA200691366 /* Extension+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697723C29380CA200691366 /* Extension+UINavigationController.swift */; };
+		2697723F29380CB200691366 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697723E29380CB200691366 /* Extension+UIViewController.swift */; };
+		2697724129380E5700691366 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724029380E5700691366 /* Extension+UIView.swift */; };
+		2697724329380EBE00691366 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724229380EBE00691366 /* Extension+UITableViewCell.swift */; };
+		2697724529380EC800691366 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724429380EC800691366 /* Extension+UITableView.swift */; };
+		2697724829380F2B00691366 /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697724729380F2B00691366 /* IRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +26,14 @@
 		2697722B29380B2C00691366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2697722E29380B2C00691366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2697723029380B2C00691366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2697723829380C7600691366 /* Extension+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Codable.swift"; sourceTree = "<group>"; };
+		2697723A29380C9000691366 /* Extension+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIApplication.swift"; sourceTree = "<group>"; };
+		2697723C29380CA200691366 /* Extension+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UINavigationController.swift"; sourceTree = "<group>"; };
+		2697723E29380CB200691366 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		2697724029380E5700691366 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		2697724229380EBE00691366 /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
+		2697724429380EC800691366 /* Extension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
+		2697724729380F2B00691366 /* IRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +66,44 @@
 		2697722129380B2A00691366 /* Image Machine */ = {
 			isa = PBXGroup;
 			children = (
-				2697722229380B2A00691366 /* AppDelegate.swift */,
-				2697722B29380B2C00691366 /* Assets.xcassets */,
+				2697723629380C1E00691366 /* Core */,
 				2697722D29380B2C00691366 /* LaunchScreen.storyboard */,
 				2697723029380B2C00691366 /* Info.plist */,
 			);
 			path = "Image Machine";
+			sourceTree = "<group>";
+		};
+		2697723629380C1E00691366 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2697723729380C6700691366 /* Extension */,
+				2697724629380F1E00691366 /* Router */,
+				2697722229380B2A00691366 /* AppDelegate.swift */,
+				2697722B29380B2C00691366 /* Assets.xcassets */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2697723729380C6700691366 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2697723829380C7600691366 /* Extension+Codable.swift */,
+				2697723A29380C9000691366 /* Extension+UIApplication.swift */,
+				2697723C29380CA200691366 /* Extension+UINavigationController.swift */,
+				2697723E29380CB200691366 /* Extension+UIViewController.swift */,
+				2697724029380E5700691366 /* Extension+UIView.swift */,
+				2697724229380EBE00691366 /* Extension+UITableViewCell.swift */,
+				2697724429380EC800691366 /* Extension+UITableView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2697724629380F1E00691366 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2697724729380F2B00691366 /* IRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2697723929380C7600691366 /* Extension+Codable.swift in Sources */,
+				2697723B29380C9000691366 /* Extension+UIApplication.swift in Sources */,
+				2697724129380E5700691366 /* Extension+UIView.swift in Sources */,
+				2697724829380F2B00691366 /* IRouter.swift in Sources */,
+				2697724329380EBE00691366 /* Extension+UITableViewCell.swift in Sources */,
 				2697722329380B2A00691366 /* AppDelegate.swift in Sources */,
+				2697723F29380CB200691366 /* Extension+UIViewController.swift in Sources */,
+				2697723D29380CA200691366 /* Extension+UINavigationController.swift in Sources */,
+				2697724529380EC800691366 /* Extension+UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
