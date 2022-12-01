@@ -11,8 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MachineDataView" customModule="Image_Machine" customModuleProvider="target">
             <connections>
                 <outlet property="machineDataTableView" destination="IBY-TL-cm9" id="wUC-Vd-Vf8"/>
+                <outlet property="nameChevronIcon" destination="0Vd-84-nHc" id="eL6-EX-x5X"/>
                 <outlet property="sortNameButton" destination="Uxi-aR-ZV8" id="hXG-dc-Tse"/>
                 <outlet property="sortTypeButton" destination="N7N-kM-vJJ" id="VfK-Ol-BM4"/>
+                <outlet property="typeChevronIcon" destination="lQo-V7-NHm" id="sef-v5-xLy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,28 +30,82 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqd-uF-GRx">
                     <rect key="frame" x="0.0" y="47" width="390" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxi-aR-ZV8">
-                            <rect key="frame" x="8" y="0.0" width="244" height="40"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" image="chevron.down.square.fill" catalog="system" title="Name"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7N-kM-vJJ">
-                            <rect key="frame" x="260" y="0.0" width="122" height="40"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Type"/>
-                        </button>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-cK-Ga8">
+                            <rect key="frame" x="8" y="8" width="244" height="40"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-84-nHc">
+                                    <rect key="frame" x="216.66666666666666" y="9.6666666666666625" width="19.333333333333343" height="21"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxi-aR-ZV8">
+                                    <rect key="frame" x="0.0" y="0.0" width="244" height="40"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Name">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="tintColor"/>
+                            <constraints>
+                                <constraint firstItem="Uxi-aR-ZV8" firstAttribute="leading" secondItem="DfW-cK-Ga8" secondAttribute="leading" id="B05-N3-zy3"/>
+                                <constraint firstAttribute="trailing" secondItem="Uxi-aR-ZV8" secondAttribute="trailing" id="Bve-jM-enI"/>
+                                <constraint firstAttribute="bottom" secondItem="Uxi-aR-ZV8" secondAttribute="bottom" id="Jw5-qd-qEf"/>
+                                <constraint firstAttribute="trailing" secondItem="0Vd-84-nHc" secondAttribute="trailing" constant="8" id="L7T-Im-UNC"/>
+                                <constraint firstAttribute="bottom" secondItem="0Vd-84-nHc" secondAttribute="bottom" constant="8" id="ZL3-gt-mSC"/>
+                                <constraint firstItem="0Vd-84-nHc" firstAttribute="top" secondItem="DfW-cK-Ga8" secondAttribute="top" constant="8" id="ZZi-US-vTm"/>
+                                <constraint firstItem="Uxi-aR-ZV8" firstAttribute="top" secondItem="DfW-cK-Ga8" secondAttribute="top" id="crU-36-L1K"/>
+                                <constraint firstAttribute="height" constant="40" id="d8o-ps-gaP"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXA-jV-Po5">
+                            <rect key="frame" x="260" y="8" width="122" height="40"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lQo-V7-NHm">
+                                    <rect key="frame" x="94.666666666666686" y="9.6666666666666625" width="19.333333333333329" height="21"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7N-kM-vJJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="122" height="40"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Type">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="tintColor"/>
+                            <constraints>
+                                <constraint firstItem="N7N-kM-vJJ" firstAttribute="top" secondItem="XXA-jV-Po5" secondAttribute="top" id="3lC-bL-EVs"/>
+                                <constraint firstAttribute="trailing" secondItem="lQo-V7-NHm" secondAttribute="trailing" constant="8" id="Jda-V9-5ne"/>
+                                <constraint firstAttribute="bottom" secondItem="N7N-kM-vJJ" secondAttribute="bottom" id="azT-Lf-IKn"/>
+                                <constraint firstItem="N7N-kM-vJJ" firstAttribute="leading" secondItem="XXA-jV-Po5" secondAttribute="leading" id="bKM-g5-x0h"/>
+                                <constraint firstItem="lQo-V7-NHm" firstAttribute="top" secondItem="XXA-jV-Po5" secondAttribute="top" constant="8" id="cjV-5j-qfr"/>
+                                <constraint firstAttribute="bottom" secondItem="lQo-V7-NHm" secondAttribute="bottom" constant="8" id="dvb-Gk-OWp"/>
+                                <constraint firstAttribute="height" constant="40" id="rSz-Ck-PSo"/>
+                                <constraint firstAttribute="trailing" secondItem="N7N-kM-vJJ" secondAttribute="trailing" id="yTu-6f-qvp"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="Uxi-aR-ZV8" firstAttribute="top" secondItem="Xqd-uF-GRx" secondAttribute="top" id="Ff9-d4-Rz8"/>
-                        <constraint firstAttribute="bottom" secondItem="Uxi-aR-ZV8" secondAttribute="bottom" id="Mhe-Iz-wEh"/>
-                        <constraint firstItem="Uxi-aR-ZV8" firstAttribute="leading" secondItem="Xqd-uF-GRx" secondAttribute="leading" constant="8" id="bA1-Aa-yYm"/>
-                        <constraint firstAttribute="trailing" secondItem="N7N-kM-vJJ" secondAttribute="trailing" constant="8" id="gXS-ku-sDP"/>
+                        <constraint firstItem="XXA-jV-Po5" firstAttribute="leading" secondItem="DfW-cK-Ga8" secondAttribute="trailing" constant="8" id="0bf-JW-aWv"/>
+                        <constraint firstItem="DfW-cK-Ga8" firstAttribute="top" secondItem="Xqd-uF-GRx" secondAttribute="top" constant="8" id="Kdc-dj-mna"/>
+                        <constraint firstAttribute="trailing" secondItem="XXA-jV-Po5" secondAttribute="trailing" constant="8" id="Mxe-BO-rF4"/>
+                        <constraint firstItem="DfW-cK-Ga8" firstAttribute="leading" secondItem="Xqd-uF-GRx" secondAttribute="leading" constant="8" id="O3b-Cl-hKr"/>
+                        <constraint firstItem="XXA-jV-Po5" firstAttribute="top" secondItem="Xqd-uF-GRx" secondAttribute="top" constant="8" id="aKh-dv-UuF"/>
+                        <constraint firstItem="XXA-jV-Po5" firstAttribute="width" secondItem="Uxi-aR-ZV8" secondAttribute="width" multiplier="0.5" id="bQC-e2-Yhq"/>
                         <constraint firstAttribute="height" constant="40" id="iMw-H7-aYB"/>
-                        <constraint firstItem="N7N-kM-vJJ" firstAttribute="leading" secondItem="Uxi-aR-ZV8" secondAttribute="trailing" constant="8" id="ijH-6Y-o93"/>
-                        <constraint firstItem="N7N-kM-vJJ" firstAttribute="top" secondItem="Xqd-uF-GRx" secondAttribute="top" id="r2L-H7-iu2"/>
-                        <constraint firstItem="N7N-kM-vJJ" firstAttribute="width" secondItem="Uxi-aR-ZV8" secondAttribute="width" multiplier="0.5" id="tf7-lv-pEZ"/>
-                        <constraint firstAttribute="bottom" secondItem="N7N-kM-vJJ" secondAttribute="bottom" id="vyw-dJ-bil"/>
                     </constraints>
                 </view>
             </subviews>
@@ -64,13 +120,16 @@
                 <constraint firstItem="IBY-TL-cm9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sjj-uz-dwT"/>
                 <constraint firstItem="Xqd-uF-GRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xBh-YZ-jQ9"/>
             </constraints>
-            <point key="canvasLocation" x="138" y="21"/>
+            <point key="canvasLocation" x="136.92307692307691" y="20.616113744075829"/>
         </view>
     </objects>
     <resources>
         <image name="chevron.down.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

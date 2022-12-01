@@ -14,4 +14,13 @@ class AppRouter: IRouter {
     func setNavigationController(_ nav: UINavigationController) {
         navigationController = nav
     }
+    
+    func setRoot(to module: FeatureModule, window: UIWindow? = nil, using params: [String : Any] = [:]) {
+        let module = module.create(using: self)
+        let viewController: UIViewController = module.resolve(using: params)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.navigationController = navigationController
+        module.router.setNavigationController(navigationController)
+        window?.rootViewController = navigationController
+    }
 }

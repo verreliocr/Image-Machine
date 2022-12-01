@@ -17,16 +17,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NNX-QR-7qh">
-                        <rect key="frame" x="8" y="0.0" width="476" height="113"/>
+                        <rect key="frame" x="8" y="8" width="476" height="105"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIL-63-Ybz">
-                                <rect key="frame" x="0.0" y="0.0" width="312" height="113"/>
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="105"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-xu-lWA">
-                                <rect key="frame" x="320" y="0.0" width="156" height="113"/>
+                                <rect key="frame" x="320" y="0.0" width="156" height="105"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="NNX-QR-7qh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Dgu-vc-K7E"/>
+                    <constraint firstItem="NNX-QR-7qh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Dgu-vc-K7E"/>
                     <constraint firstAttribute="bottom" secondItem="NNX-QR-7qh" secondAttribute="bottom" constant="8" id="Lxs-OP-4M5"/>
                     <constraint firstItem="NNX-QR-7qh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kp2-Pu-9vn"/>
                     <constraint firstAttribute="trailing" secondItem="NNX-QR-7qh" secondAttribute="trailing" constant="8" id="lP4-BS-Qp4"/>

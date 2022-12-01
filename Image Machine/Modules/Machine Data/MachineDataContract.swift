@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IMachineDataView: AnyObject {
     func showMessage(_ message: String, title: String, completion: (() -> Void)?)
@@ -14,9 +15,19 @@ protocol IMachineDataView: AnyObject {
 
 protocol IMachineDataViewModel {
     func setView(_ view: IMachineDataView)
+    func viewWillAppearing()
+    
+    func getSortedBy() -> SortType
+    
+    func getImageForSortByNameButton() -> UIImage?
+    func getImageForSortByTypeButton() -> UIImage?
+    func getFontForSortByNameButton() -> UIFont
+    func getFontForSortByTypeButton() -> UIFont
+    
     func getNumberOfMachine() -> Int
-    func getMachineName(at row: Int) -> String
-    func getMachineType(at row: Int) -> String
-    func getSortedBy() -> String
-    func getSortedType() -> String
+    func getMachineName(for row: Int) -> String
+    func getMachineType(for row: Int) -> String
+    
+    func didTapSortByNameButton()
+    func didTapSortByTypeButton()
 }

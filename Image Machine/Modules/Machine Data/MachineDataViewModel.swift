@@ -29,23 +29,81 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
         return view
     }
     
+    func viewWillAppearing() {
+        model.dummies()
+        view?.reloadData()
+    }
+    
+    func getSortedBy() -> SortType {
+        return model.sortedBy
+    }
+    
+    func getImageForSortByNameButton() -> UIImage? {
+        switch getSortedBy() {
+        case .name:
+            return UIImage(systemName: "chevron.down.square.fill")
+        case .type:
+            return UIImage(named: "")
+        }
+    }
+    
+    func getImageForSortByTypeButton() -> UIImage? {
+        switch getSortedBy() {
+        case .name:
+            return UIImage(named: "")
+        case .type:
+            return UIImage(systemName: "chevron.down.square.fill")
+        }
+    }
+    
+    func getFontForSortByNameButton() -> UIFont {
+        switch getSortedBy() {
+        case .name:
+            return UIFont.systemFont(ofSize: 20, weight: .medium)
+        case .type:
+            return UIFont.systemFont(ofSize: 16, weight: .regular)
+        }
+    }
+    
+    func getFontForSortByTypeButton() -> UIFont {
+        switch getSortedBy() {
+        case .name:
+            return UIFont.systemFont(ofSize: 16, weight: .regular)
+        case .type:
+            return UIFont.systemFont(ofSize: 20, weight: .medium)
+        }
+    }
+    
     func getNumberOfMachine() -> Int {
         return model.data.count
     }
     
-    func getMachineName(at row: Int) -> String {
-        return model.data[row].name
+    func getMachineData(for row: Int) -> MachineObject {
+        switch getSortedBy() {
+        case .name:
+            let sorted = model.data.sorted(by: { ($0.name, $0.type) < ($1.name, $1.type) })
+            return sorted[row]
+        case .type:
+            let sorted = model.data.sorted(by: { ($0.type, $0.name) < ($1.type, $1.name) })
+            return sorted[row]
+        }
     }
     
-    func getMachineType(at row: Int) -> String {
-        return model.data[row].type
+    func getMachineName(for row: Int) -> String {
+        return getMachineData(for: row).name
     }
     
-    func getSortedBy() -> String {
-        return model.sortedBy
+    func getMachineType(for row: Int) -> String {
+        return getMachineData(for: row).type
     }
     
-    func getSortedType() -> String {
-        return model.sortedType
+    func didTapSortByNameButton() {
+        model.sortedBy = .name
+        view?.reloadData()
+    }
+    
+    func didTapSortByTypeButton() {
+        model.sortedBy = .type
+        view?.reloadData()
     }
 }

@@ -20,22 +20,37 @@ class MachineDataView: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    @IBOutlet weak var nameChevronIcon: UIImageView!
+    @IBOutlet weak var typeChevronIcon: UIImageView!
     @IBOutlet weak var sortNameButton: UIButton!
     @IBOutlet weak var sortTypeButton: UIButton!
     @IBOutlet weak var machineDataTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAction()
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "Machine Data"
         setupNavigation()
+        viewModel.viewWillAppearing()
     }
     
     private func setupNavigation() {
         self.navigationController?.showBarIfNecessary()
+    }
+    
+    private func setupAction() {
+        sortNameButton.addAction { [unowned self] in
+            self.viewModel.didTapSortByNameButton()
+        }
+        
+        sortTypeButton.addAction { [unowned self] in
+            self.viewModel.didTapSortByTypeButton()
+        }
     }
     
     private func setupTableView() {
@@ -50,7 +65,15 @@ class MachineDataView: UIViewController {
 
 extension MachineDataView: IMachineDataView {
     func reloadData() {
+        nameChevronIcon.image = viewModel.getImageForSortByNameButton()
+        typeChevronIcon.image = viewModel.getImageForSortByTypeButton()
         
+        sortNameButton.titleLabel?.font = self.viewModel.getFontForSortByNameButton()
+        sortTypeButton.titleLabel?.font = self.viewModel.getFontForSortByTypeButton()
+        
+        DispatchQueue.main.async { [unowned self] in
+            self.machineDataTableView.reloadData()
+        }
     }
 }
 
@@ -66,8 +89,8 @@ extension MachineDataView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell: MachineItemTableCell = tableView.dequeueReusableCell() {
             
-            cell.bind(name: viewModel.getMachineName(at: indexPath.row),
-                      type: viewModel.getMachineType(at: indexPath.row))
+            cell.bind(name: viewModel.getMachineName(for: indexPath.row),
+                      type: viewModel.getMachineType(for: indexPath.row))
             
             return cell
         }
