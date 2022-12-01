@@ -97,6 +97,13 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
         return getMachineData(for: row).type
     }
     
+    func didTapDelete(for row: Int) {
+        let selectedMachine = getMachineData(for: row)
+        
+        model.data.removeAll(where: { $0.id == selectedMachine.id })
+        view?.reloadData()
+    }
+    
     func didTapSortByNameButton() {
         model.sortedBy = .name
         view?.reloadData()

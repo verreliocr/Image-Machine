@@ -65,9 +65,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="actionButton" destination="exc-Sx-ANT" id="D2X-oI-bsT"/>
                 <outlet property="machineNameLabel" destination="yIL-63-Ybz" id="ae3-Jh-GEn"/>
                 <outlet property="machineTypeLabel" destination="a3O-xu-lWA" id="hVg-Ml-Q7t"/>
-                <outlet property="testbutton" destination="exc-Sx-ANT" id="wJY-wV-lRP"/>
             </connections>
             <point key="canvasLocation" x="-190.76923076923077" y="-3.9099526066350707"/>
         </tableViewCell>

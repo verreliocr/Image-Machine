@@ -27,6 +27,7 @@ protocol IMachineDataViewModel {
     func getNumberOfMachine() -> Int
     func getMachineName(for row: Int) -> String
     func getMachineType(for row: Int) -> String
+    func didTapDelete(for row: Int)
     
     func didTapSortByNameButton()
     func didTapSortByTypeButton()

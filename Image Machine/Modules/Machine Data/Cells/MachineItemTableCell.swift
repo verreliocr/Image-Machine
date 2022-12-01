@@ -11,7 +11,10 @@ class MachineItemTableCell: UITableViewCell {
 
     @IBOutlet weak var machineNameLabel: UILabel!
     @IBOutlet weak var machineTypeLabel: UILabel!
-    @IBOutlet weak var testbutton: UIButton!
+    @IBOutlet weak var actionButton: UIButton!
+    
+    var didTapEdit:(() -> Void)?
+    var didTapDelete:(() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,18 +27,17 @@ class MachineItemTableCell: UITableViewCell {
     }
     
     func setupMenu() {
-        
-        let edit = UIAction(title: "Edit", image: UIImage(systemName: "pencil")) { _ in
-            print("Edit")
+        let edit = UIAction(title: "Edit", image: UIImage(systemName: "pencil")) { [unowned self]  _ in
+            self.didTapEdit?()
         }
         
-        let delete = UIAction(title: "Delete", image: UIImage(systemName: "minus")) { _ in
-            print("Delete")
+        let delete = UIAction(title: "Delete", image: UIImage(systemName: "minus")) { [unowned self] _ in
+            self.didTapDelete?()
         }
         
         let menu = UIMenu(title: "Menu", children: [edit, delete])
-        testbutton.menu = menu
-        testbutton.showsMenuAsPrimaryAction = true
+        actionButton.menu = menu
+        actionButton.showsMenuAsPrimaryAction = true
     }
     
     func bind(name: String, type: String) {
