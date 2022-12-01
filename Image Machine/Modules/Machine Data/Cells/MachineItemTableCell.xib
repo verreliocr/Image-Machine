@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,20 +21,38 @@
                         <rect key="frame" x="8" y="8" width="476" height="105"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIL-63-Ybz">
-                                <rect key="frame" x="0.0" y="0.0" width="312" height="105"/>
+                                <rect key="frame" x="0.0" y="0.0" width="234" height="105"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-xu-lWA">
-                                <rect key="frame" x="320" y="0.0" width="156" height="105"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFM-kY-cXq">
+                                <rect key="frame" x="242" y="0.0" width="234" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-xu-lWA">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="105"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exc-Sx-ANT">
+                                        <rect key="frame" x="194" y="0.0" width="40" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="0E1-4G-gBL"/>
+                                        </constraints>
+                                        <menu key="menu" id="QbW-9p-D10">
+                                            <children>
+                                                <command title="Item 1" id="urz-wt-d4G"/>
+                                                <command title="Item 2" id="a3Q-vO-Oke"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" image="ellipsis" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="a3O-xu-lWA" firstAttribute="width" secondItem="yIL-63-Ybz" secondAttribute="width" multiplier="0.5" id="Xws-F7-XNT"/>
+                            <constraint firstItem="CFM-kY-cXq" firstAttribute="width" secondItem="yIL-63-Ybz" secondAttribute="width" id="P61-SF-yew"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -48,8 +67,12 @@
             <connections>
                 <outlet property="machineNameLabel" destination="yIL-63-Ybz" id="ae3-Jh-GEn"/>
                 <outlet property="machineTypeLabel" destination="a3O-xu-lWA" id="hVg-Ml-Q7t"/>
+                <outlet property="testbutton" destination="exc-Sx-ANT" id="wJY-wV-lRP"/>
             </connections>
             <point key="canvasLocation" x="-190.76923076923077" y="-3.9099526066350707"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+    </resources>
 </document>

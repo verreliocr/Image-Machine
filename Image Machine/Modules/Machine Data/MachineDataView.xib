@@ -31,14 +31,14 @@
                     <rect key="frame" x="0.0" y="47" width="390" height="40"/>
                     <subviews>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-cK-Ga8">
-                            <rect key="frame" x="8" y="8" width="244" height="40"/>
+                            <rect key="frame" x="8" y="8" width="183" height="40"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-84-nHc">
-                                    <rect key="frame" x="216.66666666666666" y="9.6666666666666625" width="19.333333333333343" height="21"/>
+                                    <rect key="frame" x="155.66666666666666" y="9.6666666666666625" width="19.333333333333343" height="21"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxi-aR-ZV8">
-                                    <rect key="frame" x="0.0" y="0.0" width="244" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
                                     <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Name">
@@ -64,14 +64,14 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXA-jV-Po5">
-                            <rect key="frame" x="260" y="8" width="122" height="40"/>
+                            <rect key="frame" x="199" y="8" width="183" height="40"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lQo-V7-NHm">
-                                    <rect key="frame" x="94.666666666666686" y="9.6666666666666625" width="19.333333333333329" height="21"/>
+                                    <rect key="frame" x="155.66666666666669" y="9.6666666666666625" width="19.333333333333343" height="21"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7N-kM-vJJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="122" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
                                     <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Type">
@@ -104,7 +104,7 @@
                         <constraint firstAttribute="trailing" secondItem="XXA-jV-Po5" secondAttribute="trailing" constant="8" id="Mxe-BO-rF4"/>
                         <constraint firstItem="DfW-cK-Ga8" firstAttribute="leading" secondItem="Xqd-uF-GRx" secondAttribute="leading" constant="8" id="O3b-Cl-hKr"/>
                         <constraint firstItem="XXA-jV-Po5" firstAttribute="top" secondItem="Xqd-uF-GRx" secondAttribute="top" constant="8" id="aKh-dv-UuF"/>
-                        <constraint firstItem="XXA-jV-Po5" firstAttribute="width" secondItem="Uxi-aR-ZV8" secondAttribute="width" multiplier="0.5" id="bQC-e2-Yhq"/>
+                        <constraint firstItem="XXA-jV-Po5" firstAttribute="width" secondItem="Uxi-aR-ZV8" secondAttribute="width" id="bQC-e2-Yhq"/>
                         <constraint firstAttribute="height" constant="40" id="iMw-H7-aYB"/>
                     </constraints>
                 </view>
