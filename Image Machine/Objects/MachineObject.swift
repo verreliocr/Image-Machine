@@ -13,4 +13,8 @@ struct MachineObject {
     var type: String
     var qrCode: Int
     var lastMaintenance: Date
+    
+    func defaultValue() -> MachineObject {
+        return MachineObject(id: "", name: "", type: "", qrCode: 0, lastMaintenance: Date())
+    }
 }

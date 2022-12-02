@@ -11,6 +11,9 @@
 		26506128293913E800C6570B /* MachineDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26506127293913E800C6570B /* MachineDetailModel.swift */; };
 		2667EE21293A3F6A00E6E188 /* MachineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE1F293A3F6A00E6E188 /* MachineDetailView.swift */; };
 		2667EE22293A3F6A00E6E188 /* MachineDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2667EE20293A3F6A00E6E188 /* MachineDetailView.xib */; };
+		2667EE24293AB1DC00E6E188 /* MachineDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE23293AB1DC00E6E188 /* MachineDetailViewModel.swift */; };
+		2667EE26293AB32700E6E188 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE25293AB32700E6E188 /* Helper.swift */; };
+		2667EE28293AB34800E6E188 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE27293AB34800E6E188 /* Extension+Date.swift */; };
 		2697722329380B2A00691366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697722229380B2A00691366 /* AppDelegate.swift */; };
 		2697722C29380B2C00691366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2697722B29380B2C00691366 /* Assets.xcassets */; };
 		2697722F29380B2C00691366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2697722D29380B2C00691366 /* LaunchScreen.storyboard */; };
@@ -40,6 +43,9 @@
 		26506127293913E800C6570B /* MachineDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailModel.swift; sourceTree = "<group>"; };
 		2667EE1F293A3F6A00E6E188 /* MachineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailView.swift; sourceTree = "<group>"; };
 		2667EE20293A3F6A00E6E188 /* MachineDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineDetailView.xib; sourceTree = "<group>"; };
+		2667EE23293AB1DC00E6E188 /* MachineDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailViewModel.swift; sourceTree = "<group>"; };
+		2667EE25293AB32700E6E188 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		2667EE27293AB34800E6E188 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		2697721F29380B2A00691366 /* Image Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2697722229380B2A00691366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2697722B29380B2C00691366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 				26506127293913E800C6570B /* MachineDetailModel.swift */,
 				2667EE1F293A3F6A00E6E188 /* MachineDetailView.swift */,
 				2667EE20293A3F6A00E6E188 /* MachineDetailView.xib */,
+				2667EE23293AB1DC00E6E188 /* MachineDetailViewModel.swift */,
 			);
 			path = "Machine Detail";
 			sourceTree = "<group>";
@@ -137,6 +144,8 @@
 				2697724029380E5700691366 /* Extension+UIView.swift */,
 				2697724229380EBE00691366 /* Extension+UITableViewCell.swift */,
 				2697724429380EC800691366 /* Extension+UITableView.swift */,
+				2667EE27293AB34800E6E188 /* Extension+Date.swift */,
+				2667EE25293AB32700E6E188 /* Helper.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -284,7 +293,10 @@
 				2697724A29380F5500691366 /* AppRouter.swift in Sources */,
 				269772522938114000691366 /* MachineObject.swift in Sources */,
 				269772572938125A00691366 /* MachineDataView.swift in Sources */,
+				2667EE26293AB32700E6E188 /* Helper.swift in Sources */,
+				2667EE28293AB34800E6E188 /* Extension+Date.swift in Sources */,
 				2697724529380EC800691366 /* Extension+UITableView.swift in Sources */,
+				2667EE24293AB1DC00E6E188 /* MachineDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

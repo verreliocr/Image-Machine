@@ -19,6 +19,8 @@ protocol IMachineDetailViewModel {
     func getId() -> String
     func getName() -> String
     func getType() -> String
-    func getQRCodeNumber() -> Int
-    func getLastMaintenance() -> String
+    func getQRCodeNumber() -> String
+    func getLastMaintenance() -> Date
+    func isEdit() -> Bool
+    func didTapEditButton()
 }

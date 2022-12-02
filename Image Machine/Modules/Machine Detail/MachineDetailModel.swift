@@ -8,9 +8,6 @@
 import Foundation
 
 class MachineDetailModel {
-    var machineData: MachineObject
-    
-    init(machineData: MachineObject) {
-        self.machineData = machineData
-    }
+    var machineData: MachineObject = MachineObject(id: "", name: "", type: "", qrCode: 0, lastMaintenance: Date())
+    var isEdit: Bool = false
 }
