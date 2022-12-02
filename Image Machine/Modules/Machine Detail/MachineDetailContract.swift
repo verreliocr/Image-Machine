@@ -23,6 +23,9 @@ protocol IMachineDetailViewModel {
     func getQRCodeNumber() -> String
     func getLastMaintenance() -> Date
     
+    func getTextForActionButton() -> String
+    
+    func isAdd() -> Bool
     func isEdit() -> Bool
     
     func setName(_ value: String)

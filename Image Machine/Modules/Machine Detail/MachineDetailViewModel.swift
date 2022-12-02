@@ -22,7 +22,10 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
     }
     
     func resolve(using params: [String : Any]) -> UIViewController {
-        model.machineData = params["data"] as! MachineObject
+        model.isAdd = params["isAdd"] as! Bool
+        if !model.isAdd {
+            model.machineData = params["data"] as! MachineObject
+        }
         let view = MachineDetailView(viewModel: self)
         self.setView(view)
         
@@ -53,7 +56,22 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
         return model.machineData.lastMaintenance
     }
     
+    func getTextForActionButton() -> String {
+        if isAdd() {
+            return "Add Machine"
+        }else{
+            return "Edit Machine"
+        }
+    }
+    
+    func isAdd() -> Bool {
+        return model.isAdd
+    }
+    
     func isEdit() -> Bool {
+        if isAdd() {
+            return true
+        }
         return model.isEdit
     }
     

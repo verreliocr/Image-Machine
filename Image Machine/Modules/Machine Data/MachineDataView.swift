@@ -36,11 +36,23 @@ class MachineDataView: UIViewController {
         super.viewWillAppear(animated)
         self.title = "Machine Data"
         setupNavigation()
+        setupBarButton()
         viewModel.viewWillAppearing()
     }
     
     private func setupNavigation() {
         self.navigationController?.showBarIfNecessary()
+    }
+    
+    private func setupBarButton() {
+        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(didTapAddButton))
+        addButton.tintColor = .blue
+        
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
+    @objc func didTapAddButton() {
+        viewModel.didTapAddButton()
     }
     
     private func setupAction() {

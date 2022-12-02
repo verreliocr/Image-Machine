@@ -92,6 +92,11 @@ extension MachineDetailView: IMachineDetailView {
         machineQRNumberTF.isHidden = !viewModel.isEdit()
         lastMaintenanceDatePicker.isHidden = !viewModel.isEdit()
         
-        setupEditButton(isEdit: viewModel.isEdit())
+        if !viewModel.isAdd() {
+            setupEditButton(isEdit: viewModel.isEdit())
+        }
+        
+        actionButton.setTitle(viewModel.getTextForActionButton(), for: .normal)
+        actionButton.isHidden = !viewModel.isEdit()
     }
 }

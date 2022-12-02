@@ -97,6 +97,13 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
         return getMachineData(for: row).type
     }
     
+    func didSelectMachine(for row: Int) {
+        let params: [String: Any] = ["isAdd": false,
+                                     "data": getMachineData(for: row)]
+        
+        router.push(module: .machineDetail, using: params)
+    }
+    
     func didTapDelete(for row: Int) {
         let selectedMachine = getMachineData(for: row)
         
@@ -112,5 +119,11 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
     func didTapSortByTypeButton() {
         model.sortedBy = .type
         view?.reloadData()
+    }
+    
+    func didTapAddButton() {
+        let params: [String: Any] = ["isAdd": true]
+        
+        router.push(module: .machineDetail, using: params)
     }
 }
