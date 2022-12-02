@@ -92,10 +92,6 @@ extension MachineDataView: UITableViewDataSource, UITableViewDelegate {
             cell.bind(name: viewModel.getMachineName(for: indexPath.row),
                       type: viewModel.getMachineType(for: indexPath.row))
             
-            cell.didTapEdit = {
-                
-            }
-            
             cell.didTapDelete = { [weak self] in
                 self?.viewModel.didTapDelete(for: indexPath.row)
             }
