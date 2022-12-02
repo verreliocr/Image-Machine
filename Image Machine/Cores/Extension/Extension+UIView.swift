@@ -81,5 +81,26 @@ extension UIView {
         isUserInteractionEnabled = true
         objc_setAssociatedObject(self, String(format: "[%d]", arc4random()), sleeve, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
     }
+    
+    func applyShadow(
+        color: UIColor = .black,
+        alpha: Float = 0.16,
+        x: CGFloat = 0,
+        y: CGFloat = 3,
+        blur: CGFloat = 6,
+        spread: CGFloat = 0) {
+        layer.masksToBounds = false
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = alpha
+        layer.shadowOffset = CGSize(width: x, height: y)
+        layer.shadowRadius = blur / 2.0
+        if spread == 0 {
+            layer.shadowPath = nil
+        } else {
+            let dx = -spread
+            let rect = bounds.insetBy(dx: dx, dy: dx)
+            layer.shadowPath = UIBezierPath(rect: rect).cgPath
+        }
+    }
 
 }

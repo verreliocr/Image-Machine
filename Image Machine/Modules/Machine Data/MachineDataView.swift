@@ -46,7 +46,6 @@ class MachineDataView: UIViewController {
     
     private func setupBarButton() {
         let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(didTapAddButton))
-        addButton.tintColor = .blue
         
         navigationItem.rightBarButtonItem = addButton
     }
@@ -89,7 +88,7 @@ extension MachineDataView: IMachineDataView {
     }
 }
 
-extension MachineDataView: UITableViewDataSource, UITableViewDelegate {
+extension MachineDataView: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -111,5 +110,11 @@ extension MachineDataView: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+extension MachineDataView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectMachine(for: indexPath.row)
     }
 }

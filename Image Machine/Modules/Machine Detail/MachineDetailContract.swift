@@ -11,6 +11,7 @@ import UIKit
 protocol IMachineDetailView: AnyObject {
     func showMessage(_ message: String, title: String, completion: (() -> Void)?)
     func reloadData()
+    func popView()
 }
 
 protocol IMachineDetailViewModel {

@@ -19,7 +19,11 @@ class MachineDetailView: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
+    @IBOutlet weak var backView: UIView!
+    
+    @IBOutlet weak var machineIdStackView: UIStackView!
+    
     @IBOutlet weak var machineIdLabel: UILabel!
     @IBOutlet weak var machineNameLabel: UILabel!
     @IBOutlet weak var machineTypeLabel: UILabel!
@@ -35,6 +39,7 @@ class MachineDetailView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +51,6 @@ class MachineDetailView: UIViewController {
     
     private func setupNavigation() {
         self.navigationController?.showBarIfNecessary()
-        let editButton = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"), style: .plain, target: self, action: #selector(didTapEditButton))
-        navigationItem.rightBarButtonItem = editButton
     }
     
     private func setupEditButton(isEdit: Bool) {
@@ -62,6 +65,10 @@ class MachineDetailView: UIViewController {
         navigationItem.rightBarButtonItem = editButton
     }
     
+    private func setupView() {
+        backView.applyShadow()
+    }
+    
     @objc func didTapEditButton() {
         viewModel.didTapEditButton()
     }
@@ -70,6 +77,8 @@ class MachineDetailView: UIViewController {
 
 extension MachineDetailView: IMachineDetailView {
     func reloadData() {
+        machineIdStackView.isHidden = viewModel.isAdd()
+        
         machineIdLabel.text = viewModel.getId()
         machineNameLabel.text = viewModel.getName()
         machineTypeLabel.text = viewModel.getType()

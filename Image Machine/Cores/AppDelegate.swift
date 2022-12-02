@@ -26,9 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupNavBar() {
         let navAppearance = UINavigationBar.appearance()
-        navAppearance.tintColor = .white
-        navAppearance.setBackgroundImage(UIImage(), for: .default)
-        navAppearance.shadowImage = UIImage()
         navAppearance.titleTextAttributes = [.font: UIFont.boldSystemFont(ofSize: 24)]
     }
 

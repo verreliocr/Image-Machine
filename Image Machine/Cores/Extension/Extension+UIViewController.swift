@@ -50,4 +50,8 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func popView() {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
