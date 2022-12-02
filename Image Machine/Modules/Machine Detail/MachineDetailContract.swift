@@ -16,11 +16,20 @@ protocol IMachineDetailView: AnyObject {
 protocol IMachineDetailViewModel {
     func setView(_ view: IMachineDetailView)
     func viewWillAppearing()
+    
     func getId() -> String
     func getName() -> String
     func getType() -> String
     func getQRCodeNumber() -> String
     func getLastMaintenance() -> Date
+    
     func isEdit() -> Bool
+    
+    func setName(_ value: String)
+    func setType(_ value: String)
+    func setQRCodeNumber(_ value: String)
+    func setLastMaintenance(_ value: Date)
+    
     func didTapEditButton()
+    func didTapActionButton()
 }

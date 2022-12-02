@@ -10,10 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MachineDetailView" customModule="Image_Machine" customModuleProvider="target">
             <connections>
+                <outlet property="actionButton" destination="yIh-yH-e7c" id="hap-Dz-XQT"/>
                 <outlet property="lastMaintenanceDateLabel" destination="trV-gG-Ctk" id="16e-fM-Jhu"/>
                 <outlet property="lastMaintenanceDatePicker" destination="Qwl-PT-cgf" id="soi-2F-hFC"/>
                 <outlet property="machineIdLabel" destination="C3c-F2-h9h" id="5Gi-o7-HhM"/>
-                <outlet property="machineIdTF" destination="HkA-gg-wG3" id="dPa-q7-GTS"/>
                 <outlet property="machineNameLabel" destination="fre-uS-jw8" id="WpA-i2-lkZ"/>
                 <outlet property="machineNameTF" destination="4OC-My-OiD" id="n95-h1-T0G"/>
                 <outlet property="machineQRNumberLabel" destination="1gb-zK-b2f" id="1Je-Rc-gxr"/>
@@ -61,18 +61,8 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkA-gg-wG3">
-                                    <rect key="frame" x="0.0" y="40" width="358" height="24"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="24" id="gEh-sM-xuE"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="HkA-gg-wG3" secondAttribute="trailing" id="8vT-qw-QgI"/>
-                                <constraint firstItem="HkA-gg-wG3" firstAttribute="leading" secondItem="aN3-Pu-V30" secondAttribute="leading" id="GkY-s1-cYL"/>
                                 <constraint firstAttribute="trailing" secondItem="C3c-F2-h9h" secondAttribute="trailing" id="I3C-dE-sdD"/>
                                 <constraint firstItem="C3c-F2-h9h" firstAttribute="leading" secondItem="aN3-Pu-V30" secondAttribute="leading" id="IxT-1b-0Wn"/>
                             </constraints>
@@ -237,17 +227,28 @@
                         <constraint firstItem="aN3-Pu-V30" firstAttribute="leading" secondItem="feM-59-w0W" secondAttribute="leading" id="wq2-C1-Wgf"/>
                     </constraints>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIh-yH-e7c">
+                    <rect key="frame" x="8" y="730" width="374" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="gir-NF-txM"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Action"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGray3Color"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yIh-yH-e7c" secondAttribute="bottom" constant="40" id="Bfw-0Q-IMg"/>
                 <constraint firstItem="ikX-mB-qpu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="FJh-DT-9ws"/>
                 <constraint firstItem="ikX-mB-qpu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="HZ1-II-qgz"/>
                 <constraint firstItem="ikX-mB-qpu" firstAttribute="bottom" secondItem="feM-59-w0W" secondAttribute="bottom" constant="8" id="PFS-Lw-ShI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="feM-59-w0W" secondAttribute="trailing" constant="16" id="QXW-bx-67R"/>
                 <constraint firstItem="feM-59-w0W" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="ZEl-53-TeW"/>
+                <constraint firstItem="yIh-yH-e7c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="aXX-UD-Pl0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ikX-mB-qpu" secondAttribute="trailing" constant="8" id="fjj-bh-1l6"/>
                 <constraint firstItem="feM-59-w0W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="kmQ-Kn-N36"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yIh-yH-e7c" secondAttribute="trailing" constant="8" id="wWC-uk-OHW"/>
             </constraints>
             <point key="canvasLocation" x="-322" y="-31"/>
         </view>

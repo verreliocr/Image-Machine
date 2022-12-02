@@ -26,11 +26,12 @@ class MachineDetailView: UIViewController {
     @IBOutlet weak var machineQRNumberLabel: UILabel!
     @IBOutlet weak var lastMaintenanceDateLabel: UILabel!
     
-    @IBOutlet weak var machineIdTF: UITextField!
     @IBOutlet weak var machineNameTF: UITextField!
     @IBOutlet weak var machineTypeTF: UITextField!
     @IBOutlet weak var machineQRNumberTF: UITextField!
     @IBOutlet weak var lastMaintenanceDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var actionButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,18 @@ class MachineDetailView: UIViewController {
         navigationItem.rightBarButtonItem = editButton
     }
     
+    private func setupEditButton(isEdit: Bool) {
+        var editButton = UIBarButtonItem()
+        if isEdit {
+            editButton = UIBarButtonItem(image: UIImage(systemName: "x.circle"), style: .plain, target: self, action: #selector(didTapEditButton))
+            editButton.tintColor = .red
+        }else{
+            editButton = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"), style: .plain, target: self, action: #selector(didTapEditButton))
+            editButton.tintColor = .blue
+        }
+        navigationItem.rightBarButtonItem = editButton
+    }
+    
     @objc func didTapEditButton() {
         viewModel.didTapEditButton()
     }
@@ -63,7 +76,6 @@ extension MachineDetailView: IMachineDetailView {
         machineQRNumberLabel.text = viewModel.getQRCodeNumber()
         lastMaintenanceDateLabel.text = viewModel.getLastMaintenance().toString(with: "dd MMMM yyyy")
         
-        machineIdTF.text = viewModel.getId()
         machineNameTF.text = viewModel.getName()
         machineTypeTF.text = viewModel.getType()
         machineQRNumberTF.text = viewModel.getQRCodeNumber()
@@ -75,10 +87,11 @@ extension MachineDetailView: IMachineDetailView {
         machineQRNumberLabel.isHidden = viewModel.isEdit()
         lastMaintenanceDateLabel.isHidden = viewModel.isEdit()
         
-        machineIdTF.isHidden = !viewModel.isEdit()
         machineNameTF.isHidden = !viewModel.isEdit()
         machineTypeTF.isHidden = !viewModel.isEdit()
         machineQRNumberTF.isHidden = !viewModel.isEdit()
         lastMaintenanceDatePicker.isHidden = !viewModel.isEdit()
+        
+        setupEditButton(isEdit: viewModel.isEdit())
     }
 }

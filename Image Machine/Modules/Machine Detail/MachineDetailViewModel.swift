@@ -46,7 +46,7 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
     }
     
     func getQRCodeNumber() -> String {
-        return "\(model.machineData.qrCode)"
+        return model.machineData.qrCode.description
     }
     
     func getLastMaintenance() -> Date {
@@ -57,8 +57,29 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
         return model.isEdit
     }
     
+    func setName(_ value: String) {
+        model.machineData.name = value
+    }
+    
+    func setType(_ value: String) {
+        model.machineData.type = value
+    }
+    
+    func setQRCodeNumber(_ value: String) {
+        model.machineData.qrCode = value.toInt()
+    }
+    
+    func setLastMaintenance(_ value: Date) {
+        model.machineData.lastMaintenance = value
+    }
+    
     func didTapEditButton() {
-        model.isEdit = true
+        model.isEdit = !model.isEdit
+        view?.reloadData()
+    }
+    
+    func didTapActionButton() {
+        model.isEdit = false
         view?.reloadData()
     }
 }
