@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		265061242939131900C6570B /* MachineDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265061232939131900C6570B /* MachineDetailContract.swift */; };
+		26506128293913E800C6570B /* MachineDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26506127293913E800C6570B /* MachineDetailModel.swift */; };
 		2697722329380B2A00691366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697722229380B2A00691366 /* AppDelegate.swift */; };
 		2697722C29380B2C00691366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2697722B29380B2C00691366 /* Assets.xcassets */; };
 		2697722F29380B2C00691366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2697722D29380B2C00691366 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		265061232939131900C6570B /* MachineDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailContract.swift; sourceTree = "<group>"; };
+		26506127293913E800C6570B /* MachineDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailModel.swift; sourceTree = "<group>"; };
 		2697721F29380B2A00691366 /* Image Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2697722229380B2A00691366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2697722B29380B2C00691366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				265061232939131900C6570B /* MachineDetailContract.swift */,
+				26506127293913E800C6570B /* MachineDetailModel.swift */,
 			);
 			path = "Machine Detail";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				2697726129381B9000691366 /* IModule.swift in Sources */,
 				2697722329380B2A00691366 /* AppDelegate.swift in Sources */,
 				2697723F29380CB200691366 /* Extension+UIViewController.swift in Sources */,
+				26506128293913E800C6570B /* MachineDetailModel.swift in Sources */,
 				2697723D29380CA200691366 /* Extension+UINavigationController.swift in Sources */,
 				2697724F293810A300691366 /* MachineDataContract.swift in Sources */,
 				265061242939131900C6570B /* MachineDetailContract.swift in Sources */,
