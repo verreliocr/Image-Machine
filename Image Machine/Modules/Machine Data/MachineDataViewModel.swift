@@ -30,7 +30,7 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
     }
     
     func viewWillAppearing() {
-        model.dummies()
+        model.data = DiskHelper.retrieveMachineData()
         view?.reloadData()
     }
     
@@ -108,6 +108,7 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
         let selectedMachine = getMachineData(for: row)
         
         model.data.removeAll(where: { $0.id == selectedMachine.id })
+        DiskHelper.saveMachineData(model.data)
         view?.reloadData()
     }
     

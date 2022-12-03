@@ -97,6 +97,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="machineNameDidChanged:" destination="-1" eventType="editingChanged" id="ahi-sn-oLY"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <constraints>
@@ -134,6 +137,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="machineTypeDidChanged:" destination="-1" eventType="editingChanged" id="Ybw-hT-tur"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <constraints>
@@ -171,6 +177,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="machineQRCodeDidChanged:" destination="-1" eventType="editingChanged" id="8Mt-xJ-rur"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <constraints>

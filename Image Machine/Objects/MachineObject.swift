@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MachineObject {
+struct MachineObject: Codable {
     var id: String
     var name: String
     var type: String

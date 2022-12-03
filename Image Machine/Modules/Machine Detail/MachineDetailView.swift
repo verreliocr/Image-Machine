@@ -40,6 +40,8 @@ class MachineDetailView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupAction()
+        setupDatePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +62,6 @@ class MachineDetailView: UIViewController {
             editButton.tintColor = .red
         }else{
             editButton = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"), style: .plain, target: self, action: #selector(didTapEditButton))
-            editButton.tintColor = .blue
         }
         navigationItem.rightBarButtonItem = editButton
     }
@@ -71,6 +72,32 @@ class MachineDetailView: UIViewController {
     
     @objc func didTapEditButton() {
         viewModel.didTapEditButton()
+    }
+    
+    private func setupAction() {
+        actionButton.addAction { [unowned self] in
+            self.viewModel.didTapActionButton()
+        }
+    }
+    
+    @IBAction func machineNameDidChanged(_ sender: UITextField) {
+        viewModel.setName(sender.text ?? "")
+    }
+    
+    @IBAction func machineTypeDidChanged(_ sender: UITextField) {
+        viewModel.setType(sender.text ?? "")
+    }
+    
+    @IBAction func machineQRCodeDidChanged(_ sender: UITextField) {
+        viewModel.setQRCodeNumber(sender.text ?? "")
+    }
+    
+    private func setupDatePicker() {
+        lastMaintenanceDatePicker.addTarget(self, action: #selector(selectDate), for: .valueChanged)
+    }
+    
+    @objc func selectDate(sender: UIDatePicker) {
+        viewModel.setLastMaintenance(sender.date)
     }
 
 }
@@ -90,7 +117,6 @@ extension MachineDetailView: IMachineDetailView {
         machineQRNumberTF.text = viewModel.getQRCodeNumber()
         lastMaintenanceDatePicker.date = viewModel.getLastMaintenance()
         
-        machineIdLabel.isHidden = viewModel.isEdit()
         machineNameLabel.isHidden = viewModel.isEdit()
         machineTypeLabel.isHidden = viewModel.isEdit()
         machineQRNumberLabel.isHidden = viewModel.isEdit()

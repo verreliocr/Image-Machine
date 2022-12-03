@@ -84,6 +84,7 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
     }
     
     func setQRCodeNumber(_ value: String) {
+        print(value, value.toInt())
         model.machineData.qrCode = value.toInt()
     }
     
@@ -96,8 +97,33 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
         view?.reloadData()
     }
     
+    private func addAction() {
+        let newData = MachineObject(id: UUID().uuidString,
+                                    name: model.machineData.name,
+                                    type: model.machineData.type,
+                                    qrCode: model.machineData.qrCode,
+                                    lastMaintenance: model.machineData.lastMaintenance)
+        var machineData = DiskHelper.retrieveMachineData()
+        machineData.append(newData)
+        DiskHelper.saveMachineData(machineData)
+        view?.popView()
+    }
+    
+    private func editAction() {
+        var machineData = DiskHelper.retrieveMachineData()
+        
+        machineData.removeAll(where: { $0.id == model.machineData.id })
+        machineData.append(model.machineData)
+        
+        DiskHelper.saveMachineData(machineData)
+        view?.popView()
+    }
+    
     func didTapActionButton() {
-        model.isEdit = false
-        view?.reloadData()
+        if isAdd() {
+            addAction()
+        }else{
+            editAction()
+        }
     }
 }
