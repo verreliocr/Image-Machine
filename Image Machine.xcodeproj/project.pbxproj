@@ -16,6 +16,9 @@
 		2667EE28293AB34800E6E188 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE27293AB34800E6E188 /* Extension+Date.swift */; };
 		2667EE2A293ABB7800E6E188 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE29293ABB7800E6E188 /* Extension+String.swift */; };
 		2667EE2C293AC42400E6E188 /* DiskHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE2B293AC42400E6E188 /* DiskHelper.swift */; };
+		2667EE2F293AD49400E6E188 /* ScannerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE2E293AD49400E6E188 /* ScannerContract.swift */; };
+		2667EE31293AD4F000E6E188 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE30293AD4F000E6E188 /* ScannerView.swift */; };
+		2667EE33293AD7E400E6E188 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE32293AD7E400E6E188 /* ScannerViewModel.swift */; };
 		2697722329380B2A00691366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697722229380B2A00691366 /* AppDelegate.swift */; };
 		2697722C29380B2C00691366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2697722B29380B2C00691366 /* Assets.xcassets */; };
 		2697722F29380B2C00691366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2697722D29380B2C00691366 /* LaunchScreen.storyboard */; };
@@ -51,6 +54,9 @@
 		2667EE27293AB34800E6E188 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		2667EE29293ABB7800E6E188 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		2667EE2B293AC42400E6E188 /* DiskHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskHelper.swift; sourceTree = "<group>"; };
+		2667EE2E293AD49400E6E188 /* ScannerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerContract.swift; sourceTree = "<group>"; };
+		2667EE30293AD4F000E6E188 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		2667EE32293AD7E400E6E188 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		2697721F29380B2A00691366 /* Image Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2697722229380B2A00691366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2697722B29380B2C00691366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +108,16 @@
 				2667EE23293AB1DC00E6E188 /* MachineDetailViewModel.swift */,
 			);
 			path = "Machine Detail";
+			sourceTree = "<group>";
+		};
+		2667EE2D293ACE1200E6E188 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				2667EE2E293AD49400E6E188 /* ScannerContract.swift */,
+				2667EE30293AD4F000E6E188 /* ScannerView.swift */,
+				2667EE32293AD7E400E6E188 /* ScannerViewModel.swift */,
+			);
+			path = Scanner;
 			sourceTree = "<group>";
 		};
 		2697721629380B2A00691366 = {
@@ -179,6 +195,7 @@
 			children = (
 				2697724D2938105100691366 /* Machine Data */,
 				265061222939130400C6570B /* Machine Detail */,
+				2667EE2D293ACE1200E6E188 /* Scanner */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -359,14 +376,17 @@
 				2667EE21293A3F6A00E6E188 /* MachineDetailView.swift in Sources */,
 				2667EE2A293ABB7800E6E188 /* Extension+String.swift in Sources */,
 				2697726129381B9000691366 /* IModule.swift in Sources */,
+				2667EE2F293AD49400E6E188 /* ScannerContract.swift in Sources */,
 				2697722329380B2A00691366 /* AppDelegate.swift in Sources */,
 				2697723F29380CB200691366 /* Extension+UIViewController.swift in Sources */,
 				26506128293913E800C6570B /* MachineDetailModel.swift in Sources */,
 				2697723D29380CA200691366 /* Extension+UINavigationController.swift in Sources */,
 				2697724F293810A300691366 /* MachineDataContract.swift in Sources */,
+				2667EE31293AD4F000E6E188 /* ScannerView.swift in Sources */,
 				265061242939131900C6570B /* MachineDetailContract.swift in Sources */,
 				2667EE2C293AC42400E6E188 /* DiskHelper.swift in Sources */,
 				2697724A29380F5500691366 /* AppRouter.swift in Sources */,
+				2667EE33293AD7E400E6E188 /* ScannerViewModel.swift in Sources */,
 				269772522938114000691366 /* MachineObject.swift in Sources */,
 				269772572938125A00691366 /* MachineDataView.swift in Sources */,
 				2667EE26293AB32700E6E188 /* Helper.swift in Sources */,
@@ -515,6 +535,7 @@
 				DEVELOPMENT_TEAM = 6MERJ8ZW37;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Image Machine/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) requires to open your camera.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -542,6 +563,7 @@
 				DEVELOPMENT_TEAM = 6MERJ8ZW37;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Image Machine/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) requires to open your camera.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

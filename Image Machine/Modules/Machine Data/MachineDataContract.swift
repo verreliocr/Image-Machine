@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 protocol IMachineDataView: AnyObject {
-    func showMessage(_ message: String, title: String, completion: (() -> Void)?)
     func reloadData()
+    func showMessageWithMultipleAction(_ message: String, title: String, actions: [(String, UIAlertAction.Style, (() -> Void)?)])
 }
 
 protocol IMachineDataViewModel {
@@ -34,4 +34,5 @@ protocol IMachineDataViewModel {
     func didTapSortByTypeButton()
     
     func didTapAddButton()
+    func didTapScannerButton()
 }

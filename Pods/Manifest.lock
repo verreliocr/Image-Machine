@@ -1,16 +1,20 @@
 PODS:
   - Disk (0.6.4)
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - Disk
+  - SnapKit
 
 SPEC REPOS:
   trunk:
     - Disk
+    - SnapKit
 
 SPEC CHECKSUMS:
   Disk: dcee5c2e98fb72f9a924cde8da8435b08244a80e
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 293ee0694f860bfbf7f33ea157ec7c27d95a976a
+PODFILE CHECKSUM: 575e9208183094c6876c4f22dd5a8250101a07d1
 
 COCOAPODS: 1.11.3

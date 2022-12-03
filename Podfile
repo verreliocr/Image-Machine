@@ -7,5 +7,6 @@ target 'Image Machine' do
 
   # Pods for Image Machine
   pod 'Disk'
+  pod 'SnapKit'
 
 end

@@ -38,11 +38,11 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func showMessageMultipleAction(_ message: String, title: String, actions: [(String, (() -> Void)?)]) {
+    func showMessageWithMultipleAction(_ message: String, title: String, actions: [(String, UIAlertAction.Style, (() -> Void)?)]) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for action in actions {
-            let alertAction = UIAlertAction(title: action.0, style: .default) { _ in
-                action.1?()
+            let alertAction = UIAlertAction(title: action.0, style: action.1) { _ in
+                action.2?()
             }
             alert.addAction(alertAction)
         }

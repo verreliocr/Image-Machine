@@ -47,12 +47,17 @@ class MachineDataView: UIViewController {
     
     private func setupBarButton() {
         let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(didTapAddButton))
+        let scannerButton = UIBarButtonItem(image: UIImage(systemName: "qrcode.viewfinder"), style: .plain, target: self, action: #selector(didTapScannerButton))
         
-        navigationItem.rightBarButtonItem = addButton
+        navigationItem.rightBarButtonItems = [scannerButton, addButton]
     }
     
     @objc func didTapAddButton() {
         viewModel.didTapAddButton()
+    }
+    
+    @objc func didTapScannerButton() {
+        viewModel.didTapScannerButton()
     }
     
     private func setupAction() {

@@ -11,6 +11,7 @@ import UIKit
 enum FeatureModule {
     case machineData
     case machineDetail
+    case scanner
 
     func create(using router: IRouter) -> IModule {
         switch self {
@@ -18,6 +19,8 @@ enum FeatureModule {
             return MachineDataViewModel(router: router)
         case .machineDetail:
             return MachineDetailViewModel(router: router)
+        case .scanner:
+            return ScannerViewModel(router: router)
         }
     }
 }

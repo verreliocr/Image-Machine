@@ -104,12 +104,27 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
         router.push(module: .machineDetail, using: params)
     }
     
-    func didTapDelete(for row: Int) {
+    private func deleteAction(for row: Int) {
         let selectedMachine = getMachineData(for: row)
         
         model.data.removeAll(where: { $0.id == selectedMachine.id })
         DiskHelper.saveMachineData(model.data)
         view?.reloadData()
+    }
+    
+    func didTapDelete(for row: Int) {
+        view?.showMessageWithMultipleAction("Are you sure you want to delete this machine?",
+                                            title: "Warning!",
+                                            actions: [
+                                                ("Yes", UIAlertAction.Style.destructive,
+                                                 { [weak self] in
+                                                     self?.deleteAction(for: row)
+                                                 }),
+                                                ("No",
+                                                 UIAlertAction.Style.default,
+                                                 nil)
+                                            ]
+        )
     }
     
     func didTapSortByNameButton() {
@@ -126,5 +141,23 @@ class MachineDataViewModel: IMachineDataViewModel, IModule {
         let params: [String: Any] = ["isAdd": true]
         
         router.push(module: .machineDetail, using: params)
+    }
+    
+    func didTapScannerButton() {
+        let params: [String: Any] = ["delegate": true]
+        
+        router.push(module: .scanner, using: params)
+    }
+}
+
+extension MachineDataViewModel: ISCannerDelegate {
+    func scannerDidScan(with id: String) {
+        let filteredData = model.data.filter({ $0.qrCode.description == id })
+        if filteredData.count > 0 {
+            let params: [String: Any] = ["isAdd": false,
+                                         "data": filteredData.first!]
+            
+            router.push(module: .machineDetail, using: params)
+        }
     }
 }
