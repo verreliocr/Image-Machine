@@ -19,6 +19,10 @@
 		2667EE2F293AD49400E6E188 /* ScannerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE2E293AD49400E6E188 /* ScannerContract.swift */; };
 		2667EE31293AD4F000E6E188 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE30293AD4F000E6E188 /* ScannerView.swift */; };
 		2667EE33293AD7E400E6E188 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE32293AD7E400E6E188 /* ScannerViewModel.swift */; };
+		2667EE37293AE7A700E6E188 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE35293AE7A700E6E188 /* ImageCollectionCell.swift */; };
+		2667EE38293AE7A700E6E188 /* ImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2667EE36293AE7A700E6E188 /* ImageCollectionCell.xib */; };
+		2667EE3A293AE80600E6E188 /* Extension+UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE39293AE80600E6E188 /* Extension+UICollectionViewCell.swift */; };
+		2667EE3C293AE81900E6E188 /* Extension+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667EE3B293AE81900E6E188 /* Extension+UICollectionView.swift */; };
 		2697722329380B2A00691366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697722229380B2A00691366 /* AppDelegate.swift */; };
 		2697722C29380B2C00691366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2697722B29380B2C00691366 /* Assets.xcassets */; };
 		2697722F29380B2C00691366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2697722D29380B2C00691366 /* LaunchScreen.storyboard */; };
@@ -57,6 +61,10 @@
 		2667EE2E293AD49400E6E188 /* ScannerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerContract.swift; sourceTree = "<group>"; };
 		2667EE30293AD4F000E6E188 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		2667EE32293AD7E400E6E188 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		2667EE35293AE7A700E6E188 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
+		2667EE36293AE7A700E6E188 /* ImageCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionCell.xib; sourceTree = "<group>"; };
+		2667EE39293AE80600E6E188 /* Extension+UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionViewCell.swift"; sourceTree = "<group>"; };
+		2667EE3B293AE81900E6E188 /* Extension+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionView.swift"; sourceTree = "<group>"; };
 		2697721F29380B2A00691366 /* Image Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2697722229380B2A00691366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2697722B29380B2C00691366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		265061222939130400C6570B /* Machine Detail */ = {
 			isa = PBXGroup;
 			children = (
+				2667EE34293AE77F00E6E188 /* Cells */,
 				265061232939131900C6570B /* MachineDetailContract.swift */,
 				26506127293913E800C6570B /* MachineDetailModel.swift */,
 				2667EE1F293A3F6A00E6E188 /* MachineDetailView.swift */,
@@ -118,6 +127,15 @@
 				2667EE32293AD7E400E6E188 /* ScannerViewModel.swift */,
 			);
 			path = Scanner;
+			sourceTree = "<group>";
+		};
+		2667EE34293AE77F00E6E188 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2667EE35293AE7A700E6E188 /* ImageCollectionCell.swift */,
+				2667EE36293AE7A700E6E188 /* ImageCollectionCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		2697721629380B2A00691366 = {
@@ -173,6 +191,8 @@
 				2697724429380EC800691366 /* Extension+UITableView.swift */,
 				2667EE27293AB34800E6E188 /* Extension+Date.swift */,
 				2667EE29293ABB7800E6E188 /* Extension+String.swift */,
+				2667EE39293AE80600E6E188 /* Extension+UICollectionViewCell.swift */,
+				2667EE3B293AE81900E6E188 /* Extension+UICollectionView.swift */,
 				2667EE25293AB32700E6E188 /* Helper.swift */,
 				2667EE2B293AC42400E6E188 /* DiskHelper.swift */,
 			);
@@ -310,6 +330,7 @@
 				269772582938125A00691366 /* MachineDataView.xib in Resources */,
 				2697725D2938144200691366 /* MachineItemTableCell.xib in Resources */,
 				2697722F29380B2C00691366 /* LaunchScreen.storyboard in Resources */,
+				2667EE38293AE7A700E6E188 /* ImageCollectionCell.xib in Resources */,
 				2667EE22293A3F6A00E6E188 /* MachineDetailView.xib in Resources */,
 				2697722C29380B2C00691366 /* Assets.xcassets in Resources */,
 			);
@@ -367,17 +388,20 @@
 				2697725F29381AC900691366 /* MachineDataViewModel.swift in Sources */,
 				2697723929380C7600691366 /* Extension+Codable.swift in Sources */,
 				269772542938122B00691366 /* MachineDataModel.swift in Sources */,
+				2667EE37293AE7A700E6E188 /* ImageCollectionCell.swift in Sources */,
 				2697723B29380C9000691366 /* Extension+UIApplication.swift in Sources */,
 				2697724129380E5700691366 /* Extension+UIView.swift in Sources */,
 				2697725C2938144200691366 /* MachineItemTableCell.swift in Sources */,
 				2697724829380F2B00691366 /* IRouter.swift in Sources */,
 				2697724329380EBE00691366 /* Extension+UITableViewCell.swift in Sources */,
 				2697726329381B9C00691366 /* FeatureModule.swift in Sources */,
+				2667EE3A293AE80600E6E188 /* Extension+UICollectionViewCell.swift in Sources */,
 				2667EE21293A3F6A00E6E188 /* MachineDetailView.swift in Sources */,
 				2667EE2A293ABB7800E6E188 /* Extension+String.swift in Sources */,
 				2697726129381B9000691366 /* IModule.swift in Sources */,
 				2667EE2F293AD49400E6E188 /* ScannerContract.swift in Sources */,
 				2697722329380B2A00691366 /* AppDelegate.swift in Sources */,
+				2667EE3C293AE81900E6E188 /* Extension+UICollectionView.swift in Sources */,
 				2697723F29380CB200691366 /* Extension+UIViewController.swift in Sources */,
 				26506128293913E800C6570B /* MachineDetailModel.swift in Sources */,
 				2697723D29380CA200691366 /* Extension+UINavigationController.swift in Sources */,
@@ -535,7 +559,8 @@
 				DEVELOPMENT_TEAM = 6MERJ8ZW37;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Image Machine/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) requires to open your camera.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Image Machine requires to open your camera.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Image Machine requires to access your photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -563,7 +588,8 @@
 				DEVELOPMENT_TEAM = 6MERJ8ZW37;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Image Machine/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) requires to open your camera.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Image Machine requires to open your camera.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Image Machine requires to access your photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

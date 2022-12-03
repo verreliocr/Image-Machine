@@ -33,6 +33,11 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
     }
     
     func viewWillAppearing() {
+        if isAdd() {
+            model.machineData.id = UUID().uuidString
+        }
+        model.images = DiskHelper.retrievedImage(folderName: model.machineData.id)
+        
         view?.reloadData()
     }
     
@@ -91,19 +96,22 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
         model.machineData.lastMaintenance = value
     }
     
+    func getNumberOfImages() -> Int {
+        return model.images.count
+    }
+    
+    func getImage(for item: Int) -> UIImage {
+        return model.images[item]
+    }
+    
     func didTapEditButton() {
         model.isEdit = !model.isEdit
         view?.reloadData()
     }
     
     private func addAction() {
-        let newData = MachineObject(id: UUID().uuidString,
-                                    name: model.machineData.name,
-                                    type: model.machineData.type,
-                                    qrCode: model.machineData.qrCode,
-                                    lastMaintenance: model.machineData.lastMaintenance)
         var machineData = DiskHelper.retrieveMachineData()
-        machineData.append(newData)
+        machineData.append(model.machineData)
         DiskHelper.saveMachineData(machineData)
         view?.showMessage("Machine's successfully added.", title: "Info", completion: { [weak self] in
             self?.view?.popView()
@@ -130,5 +138,11 @@ class MachineDetailViewModel: IMachineDetailViewModel, IModule {
         }else{
             editAction()
         }
+    }
+    
+    func didFinishPickingImage(with images: [UIImage]) {
+        model.images.append(contentsOf: images)
+        DiskHelper.saveImage(model.images, folderName: model.machineData.id)
+        view?.reloadData()
     }
 }

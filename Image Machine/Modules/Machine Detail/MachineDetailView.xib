@@ -11,7 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MachineDetailView" customModule="Image_Machine" customModuleProvider="target">
             <connections>
                 <outlet property="actionButton" destination="yIh-yH-e7c" id="hap-Dz-XQT"/>
+                <outlet property="addImageButton" destination="dwV-ds-KeP" id="N6Z-sj-idL"/>
                 <outlet property="backView" destination="ikX-mB-qpu" id="AFp-8l-LGA"/>
+                <outlet property="imageCollectionView" destination="Jux-fU-grY" id="6d2-lK-0fC"/>
                 <outlet property="lastMaintenanceDateLabel" destination="trV-gG-Ctk" id="16e-fM-Jhu"/>
                 <outlet property="lastMaintenanceDatePicker" destination="Qwl-PT-cgf" id="soi-2F-hFC"/>
                 <outlet property="machineIdLabel" destination="C3c-F2-h9h" id="5Gi-o7-HhM"/>
@@ -176,7 +178,7 @@
                                         <constraint firstAttribute="height" constant="24" id="lZa-HO-3Wt"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     <connections>
                                         <action selector="machineQRCodeDidChanged:" destination="-1" eventType="editingChanged" id="8Mt-xJ-rur"/>
                                     </connections>
@@ -246,6 +248,34 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Action"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR7-ls-RuY">
+                    <rect key="frame" x="16" y="351" width="121" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="fVa-fH-drQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Jux-fU-grY">
+                    <rect key="frame" x="16" y="383" width="358" height="307"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="A1W-N8-Zfo">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-ds-KeP">
+                    <rect key="frame" x="342" y="347" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="NwV-8F-TVq"/>
+                        <constraint firstAttribute="height" constant="32" id="poM-Xw-XhL"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="plus.circle.fill" catalog="system"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -253,18 +283,27 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yIh-yH-e7c" secondAttribute="bottom" constant="40" id="Bfw-0Q-IMg"/>
                 <constraint firstItem="ikX-mB-qpu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FJh-DT-9ws"/>
                 <constraint firstItem="ikX-mB-qpu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="HZ1-II-qgz"/>
+                <constraint firstItem="dwV-ds-KeP" firstAttribute="centerY" secondItem="OR7-ls-RuY" secondAttribute="centerY" id="Ip4-Bt-Z7g"/>
+                <constraint firstItem="OR7-ls-RuY" firstAttribute="top" secondItem="ikX-mB-qpu" secondAttribute="bottom" constant="24" id="IyV-5f-j5M"/>
                 <constraint firstItem="ikX-mB-qpu" firstAttribute="bottom" secondItem="feM-59-w0W" secondAttribute="bottom" constant="16" id="PFS-Lw-ShI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jux-fU-grY" secondAttribute="trailing" constant="16" id="PUh-Yt-VGf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="feM-59-w0W" secondAttribute="trailing" constant="32" id="QXW-bx-67R"/>
+                <constraint firstItem="OR7-ls-RuY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Tch-dd-nOC"/>
+                <constraint firstItem="Jux-fU-grY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Yng-AI-NcY"/>
                 <constraint firstItem="feM-59-w0W" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="ZEl-53-TeW"/>
                 <constraint firstItem="yIh-yH-e7c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aXX-UD-Pl0"/>
+                <constraint firstItem="yIh-yH-e7c" firstAttribute="top" secondItem="Jux-fU-grY" secondAttribute="bottom" constant="40" id="dl9-QZ-d0T"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ikX-mB-qpu" secondAttribute="trailing" constant="16" id="fjj-bh-1l6"/>
                 <constraint firstItem="feM-59-w0W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="kmQ-Kn-N36"/>
+                <constraint firstItem="Jux-fU-grY" firstAttribute="top" secondItem="OR7-ls-RuY" secondAttribute="bottom" constant="8" id="opZ-gp-yel"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yIh-yH-e7c" secondAttribute="trailing" constant="16" id="wWC-uk-OHW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwV-ds-KeP" secondAttribute="trailing" constant="16" id="z5U-c5-35k"/>
             </constraints>
-            <point key="canvasLocation" x="-322" y="-31"/>
+            <point key="canvasLocation" x="-323.07692307692304" y="-31.279620853080566"/>
         </view>
     </objects>
     <resources>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

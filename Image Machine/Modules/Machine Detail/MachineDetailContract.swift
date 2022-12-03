@@ -34,6 +34,11 @@ protocol IMachineDetailViewModel {
     func setQRCodeNumber(_ value: String)
     func setLastMaintenance(_ value: Date)
     
+    func getNumberOfImages() -> Int
+    func getImage(for item: Int) -> UIImage
+    
     func didTapEditButton()
     func didTapActionButton()
+    
+    func didFinishPickingImage(with images: [UIImage])
 }

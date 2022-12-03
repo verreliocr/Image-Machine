@@ -14,8 +14,19 @@ struct DiskHelper {
     }
     
     static func retrieveMachineData() -> [MachineObject] {
-        if let token = try? Disk.retrieve("machine.json", from: .applicationSupport, as: [MachineObject].self) {
-            return token
+        if let machines = try? Disk.retrieve("machine.json", from: .applicationSupport, as: [MachineObject].self) {
+            return machines
+        }
+        return []
+    }
+    
+    static func saveImage(_ data: [UIImage], folderName: String) {
+        try? Disk.save(data, to: .documents, as: "\(folderName)/")
+    }
+    
+    static func retrievedImage(folderName: String) -> [UIImage] {
+        if let images = try? Disk.retrieve("\(folderName)/", from: .documents, as: [UIImage].self) {
+            return images
         }
         return []
     }
