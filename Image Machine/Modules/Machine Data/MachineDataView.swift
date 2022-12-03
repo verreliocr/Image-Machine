@@ -25,6 +25,7 @@ class MachineDataView: UIViewController {
     @IBOutlet weak var sortNameButton: UIButton!
     @IBOutlet weak var sortTypeButton: UIButton!
     @IBOutlet weak var machineDataTableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,8 @@ class MachineDataView: UIViewController {
 
 extension MachineDataView: IMachineDataView {
     func reloadData() {
+        emptyView.isHidden = viewModel.getNumberOfMachine() > 0
+        
         nameChevronIcon.image = viewModel.getImageForSortByNameButton()
         typeChevronIcon.image = viewModel.getImageForSortByTypeButton()
         

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MachineDataView" customModule="Image_Machine" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="A2U-U2-FbK" id="UlR-ml-nbo"/>
                 <outlet property="machineDataTableView" destination="IBY-TL-cm9" id="wUC-Vd-Vf8"/>
                 <outlet property="nameChevronIcon" destination="0Vd-84-nHc" id="eL6-EX-x5X"/>
                 <outlet property="sortNameButton" destination="Uxi-aR-ZV8" id="hXG-dc-Tse"/>
@@ -24,11 +25,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IBY-TL-cm9">
-                    <rect key="frame" x="0.0" y="95" width="390" height="715"/>
+                    <rect key="frame" x="0.0" y="103" width="390" height="707"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqd-uF-GRx">
-                    <rect key="frame" x="0.0" y="47" width="390" height="40"/>
+                    <rect key="frame" x="0.0" y="55" width="390" height="40"/>
                     <subviews>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-cK-Ga8">
                             <rect key="frame" x="8" y="8" width="183" height="40"/>
@@ -108,16 +109,55 @@
                         <constraint firstAttribute="height" constant="40" id="iMw-H7-aYB"/>
                     </constraints>
                 </view>
+                <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2U-U2-FbK">
+                    <rect key="frame" x="16" y="336.66666666666669" width="358" height="240.00000000000006"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shippingbox.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FAu-Tm-UhI">
+                            <rect key="frame" x="139" y="16.333333333333336" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="AQo-Hz-o9u"/>
+                                <constraint firstAttribute="height" constant="80" id="b4O-iq-lCL"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd2-ij-5qG">
+                            <rect key="frame" x="16" y="112" width="326" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks like nothing in here yet, try adding some new machine!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06v-ac-bHe">
+                            <rect key="frame" x="16" y="140" width="326" height="38.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="FAu-Tm-UhI" firstAttribute="centerX" secondItem="A2U-U2-FbK" secondAttribute="centerX" id="6vK-AM-u2R"/>
+                        <constraint firstItem="06v-ac-bHe" firstAttribute="top" secondItem="fd2-ij-5qG" secondAttribute="bottom" constant="8" id="CRh-cr-o7J"/>
+                        <constraint firstAttribute="height" constant="240" id="FUq-WR-kUA"/>
+                        <constraint firstItem="fd2-ij-5qG" firstAttribute="top" secondItem="FAu-Tm-UhI" secondAttribute="bottom" constant="16" id="I5Q-Qm-bA7"/>
+                        <constraint firstItem="FAu-Tm-UhI" firstAttribute="top" secondItem="A2U-U2-FbK" secondAttribute="top" constant="16" id="LiQ-3e-p9A"/>
+                        <constraint firstAttribute="trailing" secondItem="06v-ac-bHe" secondAttribute="trailing" constant="16" id="XDU-3O-558"/>
+                        <constraint firstAttribute="trailing" secondItem="fd2-ij-5qG" secondAttribute="trailing" constant="16" id="gb4-DG-nOd"/>
+                        <constraint firstItem="fd2-ij-5qG" firstAttribute="leading" secondItem="A2U-U2-FbK" secondAttribute="leading" constant="16" id="lOg-pT-elb"/>
+                        <constraint firstItem="06v-ac-bHe" firstAttribute="leading" secondItem="A2U-U2-FbK" secondAttribute="leading" constant="16" id="uuJ-VF-tgV"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="IBY-TL-cm9" firstAttribute="top" secondItem="Xqd-uF-GRx" secondAttribute="bottom" constant="8" id="H5p-tE-ea4"/>
-                <constraint firstItem="Xqd-uF-GRx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Onp-Ra-aB3"/>
+                <constraint firstItem="Xqd-uF-GRx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="Onp-Ra-aB3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xqd-uF-GRx" secondAttribute="trailing" id="Uue-Zq-K6G"/>
+                <constraint firstItem="A2U-U2-FbK" firstAttribute="centerY" secondItem="IBY-TL-cm9" secondAttribute="centerY" id="XDq-EG-Z1M"/>
+                <constraint firstItem="A2U-U2-FbK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ZnC-Rb-7Dg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IBY-TL-cm9" secondAttribute="trailing" id="aLU-Fw-WGr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IBY-TL-cm9" secondAttribute="bottom" id="bhS-Sg-WcP"/>
                 <constraint firstItem="IBY-TL-cm9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sjj-uz-dwT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A2U-U2-FbK" secondAttribute="trailing" constant="16" id="vML-aM-3u1"/>
                 <constraint firstItem="Xqd-uF-GRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xBh-YZ-jQ9"/>
             </constraints>
             <point key="canvasLocation" x="136.92307692307691" y="20.616113744075829"/>
@@ -125,6 +165,7 @@
     </objects>
     <resources>
         <image name="chevron.down.square.fill" catalog="system" width="128" height="114"/>
+        <image name="shippingbox.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
