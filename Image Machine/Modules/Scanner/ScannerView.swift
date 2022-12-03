@@ -191,7 +191,9 @@ class ScannerView: UIViewController {
 extension ScannerView: IScannerView {
     func reloadView() {
         capturedView.frame = CGRect.zero
-        captureSession.startRunning()
+        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
+            captureSession.startRunning()
+        }
     }
 }
 

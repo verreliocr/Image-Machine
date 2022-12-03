@@ -10,6 +10,7 @@ import UIKit
 
 protocol IMachineDataView: AnyObject {
     func reloadData()
+    func showMessage(_ message: String, title: String, completion: (() -> Void)?)
     func showMessageWithMultipleAction(_ message: String, title: String, actions: [(String, UIAlertAction.Style, (() -> Void)?)])
 }
 

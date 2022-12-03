@@ -158,6 +158,8 @@ extension MachineDataViewModel: ISCannerDelegate {
                                          "data": filteredData.first!]
             
             router.push(module: .machineDetail, using: params)
+        }else{
+            view?.showMessage("Machine not found!", title: "Info", completion: nil)
         }
     }
 }
